@@ -189,9 +189,9 @@ class Shopee():
     def __init__(self):
         self.chrome = Chrome()
         self.url = {
-            'login-page': 'https://shopee.tw/buyer/login',
-            'check-if-user-has-logged-in': 'https://shopee.tw/api/v2/user/account_info',
-            'get-shopee-coins': 'https://shopee.tw/mkt/coins/api/v2/checkin_new'
+            'login-page': 'https://shopee.sg/buyer/login',
+            'check-if-user-has-logged-in': 'https://shopee.sg/api/v2/user/account_info',
+            'get-shopee-coins': 'https://shopee.sg/mkt/coins/api/v2/checkin_new'
         }
         self.locator = {
             'username-input': (By.NAME, 'loginKey'),
@@ -282,7 +282,7 @@ class Shopee():
         cookies = {}
         for cookie in pickle.load(open(path.cookies + user, 'rb')): cookies[cookie['name']] = cookie['value']
         res = json.loads(requests.post(self.url['get-shopee-coins'], cookies=cookies).text)
-
+        
         if res['data']['success'] == True: logging.info(f'User[{user}] got the coins.')
         else: logging.info(f'User[{user}] already got the coins. (Or failed to)')
     # end getCoins()
