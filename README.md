@@ -1,7 +1,8 @@
 # ⚠️Use at your own risk!⚠️
 **It is against Shopee Singapore Tos for using bots**
 > (k) access the Shopee platform, open a user account, or otherwise access your user account using any non-official Shopee hardware or software, including but not limited to an emulator, simulator, bot or other similar hardware or software;
-Technically not a bot since it uses POST request as per in the app?Just use at your own risk if you decide to use it.
+
+Technically not a bot since it uses the same POST request as per in the app?Just use at your own risk if you decide to use it.
 
 # Shopee Helper
 🤑Automatically get your shopee coins and have your plants watered automatically!💧
