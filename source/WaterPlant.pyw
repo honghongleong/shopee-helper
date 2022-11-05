@@ -293,6 +293,8 @@ class Shopee():
         cookies = {}
         for cookie in pickle.load(open(path.cookies + user, 'rb')): cookies[cookie['name']] = cookie['value']
         res = json.loads(requests.post(self.url['shopee-grocery-store'], cookies=cookies).text)
+        print(res)
+        print(res['data'])
         logging.info(f'User[{user}] has collect water from grocery.')
 
     def getWaterForEveryUser(self):
@@ -300,7 +302,7 @@ class Shopee():
             if self.hasNotLoggedIn(user): self.login(user)
 
             self.getWater(user)
-            self.getGrocery(user)
+            #self.getGrocery(user)
         # end for
     # end getCoinsForEveryUser()
 # end class Shopee
